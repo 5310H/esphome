@@ -115,7 +115,7 @@ void CTClampConfig::update_from_reading(const SensorReading &sensor_reading) {
 float CTClampConfig::get_calibrated_power(int32_t raw_power) const {
   float calibration = this->phase_->get_calibration();
 
-  float correction_factor = (this->input_port_ < 3) ? 5.5 : 22;
+//  float correction_factor = (this->input_port_ < 3) ? 5.5 : 22;
 
   return (raw_power * calibration) / correction_factor;
 }
